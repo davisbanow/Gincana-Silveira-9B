@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Pergunta 4</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .img-bottom {
+            position: fixed;
+            bottom: 10px;
+            left: 100%;
+            transform: translateX(-100%);
+            width: 200px;
+        }
+    </style>
+
+    <script>
+        const respostaCorreta = 1;
+        function responder(valor) {
+            if (valor === respostaCorreta) {
+                window.location.href = "senha4.html";
+            } else {
+                window.location.href = "espera4.html";
+            }
+        }
+    </script>
+</head>
+
+<body class="centralizado">
+    <h1>Pergunta 4:</h1>
+    <h2>Uma loja oferece 20% de desconto em uma mercadoria que originalmente custa R$ 150,00. Qual é o valor do desconto?</h2>
+?</h2>
+
+    <div class="btn-group">
+        <button onclick="responder(1)">R$30,00</button>
+        <button onclick="responder(2)">R$20,00</button>
+        <button onclick="responder(3)">R$130,00</button>
+        <button onclick="responder(4)">R$120,00</button>
+    </div>
+
+    <img src="turma.png" alt="Turma" class="img-bottom">
+</body>
+</html>

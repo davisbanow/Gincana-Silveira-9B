@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Pergunta 9</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .img-bottom {
+            position: fixed;
+            bottom: 10px;
+            left: 100%;
+            transform: translateX(-100%);
+            width: 200px;
+        }
+    </style>
+
+    <script>
+        const respostaCorreta = 3;
+        function responder(valor) {
+            if (valor === respostaCorreta) {
+                window.location.href = "senha10.html";
+            } else {
+                window.location.href = "espera10.html";
+            }
+        }
+    </script>
+</head>
+
+<body class="centralizado">
+    <h2>Prepare-se para a última pergunta!</h2>
+    <h2>Pergunta 10:</h2>
+
+    <p> O que caracteriza a linguagem usada na maioria das notícias?</p>
+
+    <div class="btn-group">
+        <button onclick="responder(1)">Subjetiva e poética.</button>
+        <button onclick="responder(2)">Informal e coloquial.</button>
+        <button onclick="responder(3)">Objetiva, clara e impessoal.</button>
+        <button onclick="responder(4)">Criativa e fantasiosa.</button>
+    </div>
+
+    <img src="turma.png" alt="Turma" class="img-bottom">
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Pergunta 3</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .img-bottom {
+            position: fixed;
+            bottom: 10px;
+            left: 100%;
+            transform: translateX(-100%);
+            width: 200px;
+        }
+    </style>
+
+    <script>
+        const respostaCorreta = 1;
+        function responder(valor) {
+            if (valor === respostaCorreta) {
+                window.location.href = "senha3.html";
+            } else {
+                window.location.href = "espera3.html";
+            }
+        }
+    </script>
+</head>
+
+<body class="centralizado">
+    <h1>Pergunta 3:</h1>
+    <h2>As ligações químicas desempenham um papel fundamental na formação de substâncias e na estabilidade 
+        dos compostos químicos. Todas as substâncias presentes surgem através da união entre átomos. 
+        Qual dos seguintes fatores determina a tendência de um átomo de formar ligações químicas com 
+        outros átomos?</h2>
+
+    <div class="btn-group">
+        <button onclick="responder(1)">O número de elétrons na camada de valência.</button>
+        <button onclick="responder(2)">O número de camadas eletrônicas.</button>
+        <button onclick="responder(3)">A massa atômica do átomo.</button>
+        <button onclick="responder(4)">A densidade do núcleo atômico.</button>
+    </div>
+
+    <img src="turma.png" alt="Turma" class="img-bottom">
+</body>
+</html>

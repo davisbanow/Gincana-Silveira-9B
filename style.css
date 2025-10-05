@@ -1,0 +1,79 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: rgb(255, 236, 212); /* cor fixa para TODAS as resoluções */
+  font-size: 16px;
+  padding: 10px;
+}
+
+.centralizado {
+  text-align: center;
+}
+
+.container {
+  max-width: 90%;
+  margin: auto;
+}
+
+.btn-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  max-width: 300px;
+  margin: 20px auto;
+}
+
+.btn-group button {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.btn-group button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+}
+
+/* imagem no canto inferior direito */
+.img-bottom {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 120px;
+  height: auto;
+  max-width: 25vw;
+  z-index: 10;
+  pointer-events: none;
+}
+
+@media (max-width: 500px) {
+  .btn-group {
+    grid-template-columns: 1fr;
+  }
+
+  .img-bottom {
+    width: 80px; /* menor em celulares */
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  body {
+    font-size: 18px;
+    padding: 20px;
+  }
+}
+
+@media (min-width: 1025px) {
+  body {
+    font-size: 20px;
+    padding: 30px;
+  }
+}

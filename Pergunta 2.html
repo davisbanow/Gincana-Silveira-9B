@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Pergunta 2</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .img-bottom {
+            position: fixed;
+            bottom: 10px;
+            left: 100%;
+            transform: translateX(-100%);
+            width: 200px;
+        }
+    </style>
+
+    <script>
+        const respostaCorreta = 4;
+        function responder(valor) {
+            if (valor === respostaCorreta) {
+                window.location.href = "senha2.html";
+            } else {
+                window.location.href = "espera2.html";
+            }
+        }
+    </script>
+</head>
+
+<body class="centralizado">
+    <h1>Pergunta 2:</h1>
+    <h2>O que significa globalização?</h2>
+
+    <div class="btn-group">
+        <button onclick="responder(1)">O isolamento econômico entre países.</button>
+        <button onclick="responder(2)">O fim do comércio internacional.</button>
+        <button onclick="responder(3)">A criação de fronteiras mais rígidas.</button>
+        <button onclick="responder(4)">A intensificação das relações econômicas, culturais e sociais no mundo.</button>
+    </div>
+
+    <img src="turma.png" alt="Turma" class="img-bottom">
+</body>
+</html>

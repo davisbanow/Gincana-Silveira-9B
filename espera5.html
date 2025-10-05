@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alternativa Errada</title>
+      <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 80px;
+    }
+    #timer {
+      font-size: 3em;
+      font-weight: bold;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>Resposta Incorreta </h1>
+  <p>Espere o tempo acabar para voltar ao quiz:</p>
+  <div id="timer">120</div>
+
+  <script>
+    let timeLeft = 120;
+    let timer;
+
+    function startTimer() {
+      timer = setInterval(function() {
+        document.getElementById("timer").textContent = timeLeft;
+        timeLeft--;
+
+        if (timeLeft < 0) {
+          clearInterval(timer);
+        
+          localStorage.removeItem("penalidadeAtiva"); 
+          window.location.href = "Pergunta 5.html";
+        }
+      }, 1000);
+    }
+
+    
+    localStorage.setItem("penalidadeAtiva", "true");
+
+    
+    window.onbeforeunload = function () {
+      localStorage.setItem("reiniciarPenalidade", "true");
+    };
+
+    
+    if (localStorage.getItem("reiniciarPenalidade") === "true") {
+      localStorage.removeItem("reiniciarPenalidade");
+      
+      timeLeft = 120;
+    }
+
+    startTimer();
+  </script>
+
+     <style>
+        .img-bottom {
+            position: fixed;
+            bottom: 10px;      
+            left: 100%;
+            transform: translateX(-100%);
+            width: 200px;     
+        }
+    </style>
+</body>
+</html>

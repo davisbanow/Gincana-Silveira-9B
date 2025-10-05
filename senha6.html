@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alternativa Correta</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    
+      padding: 20px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    #senhaInput {
+      padding: 12px;
+      font-size: 1em;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      width: 250px;
+      max-width: 80%;
+    }
+
+    .btn-group {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .btn-group button {
+      background: linear-gradient(135deg, #3b82f6, #2563eb);
+      color: white;
+      padding: 14px;
+      border: none;
+      border-radius: 12px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .btn-group button:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    }
+
+    .erro {
+      color: red;
+      font-weight: bold;
+      margin-top: 12px;
+    }
+
+    .img-bottom {
+      position: fixed;
+      bottom: 10px;
+      left: 100%;
+      transform: translateX(-100%);
+      width: 200px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Parabéns, alternativa correta!</h1>
+  <p>"Depois de tanto correr você vai precisar comer. Entre mesas e bandejas a próxima pista vai aparecer"</p>
+  <p>Vá até o local, encontre a senha escondida e digite abaixo:</p>
+
+  <input type="text" id="senhaInput" placeholder="Digite a senha">
+
+
+  <div class="btn-group">
+    <button onclick="verificarSenha()">Enviar</button>
+  </div>
+
+  <p id="mensagem" class="erro"></p>
+
+  <img src="turma.png" alt="Turma" class="img-bottom">
+
+  <script>
+    function verificarSenha() {
+      const senhaCorreta = "1728";
+      const senhaDigitada = document.getElementById("senhaInput").value;
+
+      if (senhaDigitada === senhaCorreta) {
+        window.location.href = "pergunta7.html";
+      } else {
+        document.getElementById("mensagem").textContent = "Senha incorreta! Tente novamente.";
+      }
+    }
+  </script>
+</body>
+
+</html>

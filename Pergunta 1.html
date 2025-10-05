@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <title>Pergunta 1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .img-bottom {
+            position: fixed;
+            bottom: 10px;
+            left: 100%;
+            transform: translateX(-100%);
+            width: 200px;
+        }
+    </style>
+
+    <script>
+        const respostaCorreta = 2;
+        function responder(valor) {
+            if (valor === respostaCorreta) {
+                window.location.href = "senha1.html";
+            } else {
+                window.location.href = "espera1.html";
+            }
+        }
+    </script>
+</head>
+
+<body class="centralizado">
+    <h1>Pergunta 1:</h1>
+    <h2>Qual a principal finalidade de uma notícia?</h2>
+    <div class="btn-group">
+        <button onclick="responder(1)">Convencer o leitor a adotar uma opinião.</button>
+        <button onclick="responder(2)">Relatar fatos e acontecimentos de interesse público.</button>
+        <button onclick="responder(3)">Ensinar regras gramaticais e ortográficas.</button>
+        <button onclick="responder(4)">Contar um história fictícia para entreter.<button>
+    </div>
+
+    <img src="turma.png" alt="Turma" class="img-bottom">
+</body>
+
+</html>

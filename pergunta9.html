@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Pergunta 9</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .img-bottom {
+            position: fixed;
+            bottom: 10px;
+            left: 100%;
+            transform: translateX(-100%);
+            width: 200px;
+        }
+    </style>
+
+    <script>
+        const respostaCorreta = 4;
+        function responder(valor) {
+            if (valor === respostaCorreta) {
+                window.location.href = "senha9.html";
+            } else {
+                window.location.href = "espera9.html";
+            }
+        }
+    </script>
+</head>
+
+<body class="centralizado">
+    <h1>Pergunta 9:</h1>
+
+    <p>Das organelas citadas abaixo, qual se caracteriza por ser o sítio da respiração celular em células eucaróticas?</p>
+   
+
+    <div class="btn-group">
+        <button onclick="responder(1)">Complexo golgiense.</button>
+        <button onclick="responder(2)">Retículo endoplasmático.</button>
+        <button onclick="responder(3)">Lisossomo.</button>
+        <button onclick="responder(4)">Mitocôndria.</button>
+    </div>
+
+    <img src="turma.png" alt="Turma" class="img-bottom">
+</body>
+</html>
